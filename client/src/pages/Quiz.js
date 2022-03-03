@@ -93,8 +93,9 @@ class App extends Component {
             setCurrent={this.setCurrent.bind(this)}
             setScore={this.setScore.bind(this)}
           />
-           <Timer initMinute={3} initSeconds={30} />
+           
           {results}
+          <Timer initMinute={3} initSeconds={30} />
         </div>
       )
     } else {
