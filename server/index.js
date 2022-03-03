@@ -16,16 +16,14 @@ const db = mysql.createConnection({
 // Membuat akun player baru
 app.post("/create", (req, res) => {
   const name = req.body.name;
-  const password = req.body.password;;  
 
   db.query(
-    "INSERT INTO player (name, password) VALUES (?,?)",
-    [name, password],
+    "INSERT INTO player (name) VALUES (?)",
+    [name],
     (err, result) => {
       if (err) {
         console.log(err);
       } else {
-        console.log(password);
         res.send("Data berhasil ditambahkan");
       }
     }
@@ -42,6 +40,7 @@ app.get("/player", (req, res) => {
   });
 });
 
+
 app.put("/update", (req, res) => {
   const id = req.body.id;
   const name = req.body.name;
@@ -52,19 +51,19 @@ app.put("/update", (req, res) => {
       if (err) {
         console.log(err);
       } else {
-        res.send(result);
+        res.send("Data berhasil diubah");
       }
     }
   );
 });
 
-app.delete("/delete/:id", (req, res) => {
-  const id = req.params.id;
+app.delete("/delete", (req, res) => {
+  const id = req.body.id;
   db.query("DELETE FROM player WHERE id = ?", id, (err, result) => {
     if (err) {
       console.log(err);
     } else {
-      res.send(result);
+      res.send("Data berhasil dihapus");
     }
   });
 });
