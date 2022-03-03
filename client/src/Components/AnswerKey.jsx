@@ -9,10 +9,8 @@ class AnswerKey extends Component {
                         return (
                             <div key={index}>
                                 <center> 
-                                    <h4>Question {index + 1}</h4>
-                                    {question.text}<br /><br />
-                                    <h4>Answer</h4>
-                                    {question.correct}
+                                    <h4>Pertanyaan ke-{index + 1} : {question.text}</h4>                                    
+                                    <h4>Jawaban yang Benar : {question.correct}</h4>                                    
                                 </center>
                                 <hr />
                             </div>

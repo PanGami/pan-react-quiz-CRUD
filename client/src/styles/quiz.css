@@ -25,6 +25,7 @@ body {
 
 .category {
     font-size: 120%;
+    margin-top: 10vh;
 }
 
 .difficulty {
@@ -34,11 +35,19 @@ body {
 }
 
 .answer-key {
-    margin: 0 0 3px 0;
+    margin: 0 0 3px 0;    
 }
 
 .results {
     font-size: 500%;
     font-weight: bolder;
     text-align: center;
+}
+
+.list-group-item{
+    background-color: #ADD8E6 !important;
+    border: none !important;
+    display:inline-table !important;    
+    margin: 11px;
+    margin-top: 30px;
 }

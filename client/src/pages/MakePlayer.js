@@ -1,6 +1,7 @@
 import "../styles/makePlayer.css";
 import { useState } from "react";
 import Axios from "axios";
+import { Button} from 'react-bootstrap'
 
 function MakePlayer() {
   const [name, setName] = useState("");  
@@ -66,10 +67,10 @@ function MakePlayer() {
             setName(event.target.value);
           }}
         />
-        <button onClick={addplayer}>Add player</button>
+        <Button onClick={addplayer}>Menambahkan player</Button>
       </div>
       <div className="players">
-        <button onClick={getplayers}>Show players</button>
+        <Button onClick={getplayers}>all players</Button>
 
         {playerList.map((val, key) => {
           return (
@@ -85,22 +86,23 @@ function MakePlayer() {
                     setNewName(event.target.value);
                   }}
                 />
-                <button
+                <Button
                   onClick={() => {
                     updatePlayerName(val.id);
                   }}
                 >
                   {" "}
                   Update
-                </button>
+                </Button>
 
-                <button
+                <Button
+                  bsStyle={'primary'}
                   onClick={() => {
                     deleteplayer(val.id);
                   }}
                 >
                   Delete
-                </button>
+                </Button>
               </div>
             </div>
           );

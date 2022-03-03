@@ -29,12 +29,12 @@ class Results extends Component {
                     </center>
                     <hr />
                     <center>
-                        <Button bsStyle="success" href="/">Take Again</Button>
+                        <Button bsStyle="success" href="/">Apakah Anda Ingin Mengulang Test?</Button>
                     </center>
                 </Well>
                 <Well>
                     <center>
-                        <h3>Answer Key</h3>
+                        <h3>KUNCI JAWABAN / PEMBAHASAN</h3>
                     </center>
                     <hr />
                     <AnswerKey questions={this.props.questions} />

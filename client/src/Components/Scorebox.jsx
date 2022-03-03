@@ -6,8 +6,8 @@ class Scorebox extends Component {
         return (
             <Well className="scorebox">
                 <center>
-                    Question <strong>{this.props.current + 1}</strong> of <strong>{this.props.questions.length}</strong><br />
-                    <strong>Score </strong><span className="score">{this.props.score}</span>
+                <strong>Skor anda </strong><span className="score">{this.props.score}</span><br/>
+                    Pertanyaan Ke- <strong>{this.props.current + 1}</strong> Dari <strong>{this.props.questions.length}</strong>                    
                 </center>
             </Well>
         )

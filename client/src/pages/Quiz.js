@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   render() {
-    if (this.state.loading === false) {
+    if (this.state.loading === false) {      
       if (this.state.current >= this.state.questions.length) {
         var scorebox = ''
         var results = <Results {...this.state} />

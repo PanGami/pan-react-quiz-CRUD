@@ -2,6 +2,7 @@ import "../styles/makePlayer.css";
 import { useState } from "react";
 import Axios from "axios";
 import { Link } from "react-router-dom";
+import { Button} from 'react-bootstrap'
 
 function Login() {
   const [name, setName] = useState("");
@@ -37,7 +38,7 @@ function Login() {
   return (
     <div className="MakePlayer">
       <div className="players">
-        <button onClick={getplayers}>Click Saya dulu!</button>
+        <Button onClick={getplayers}>Click Saya dulu!</Button>
 
         {playerList.map((val, key) => {
           return (
@@ -49,7 +50,7 @@ function Login() {
           <label>Anda Ingin login sebagai Player mana?</label>
           <h3>{inputan}</h3>
             <input type="text" onChange={getData}/>
-            <button><Link to="/makePlayer"></Link>Menambahkan Player!</button>
+            <Link to="/makePlayer"><Button>Menambahkan Player!</Button></Link>
         </div>
       </div>
     </div>
